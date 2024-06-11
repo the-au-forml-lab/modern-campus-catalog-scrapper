@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for f in ./*.json; do
-    echo "Code,Number,Title,Credit Hours,Description,Lecture Hours,Lab Hours,Grade Mode,Repeat Status,Pre-requisites,Schedule Type" > $f.csv
+    echo "Code,Number,Title,Credit Hours,Description,Lecture Hours,Lab Hours,Grade Mode,Repeat Status,Pre-requisites,Schedule Type" > "${f%.*}".csv
     # Getting rid of the array markers
     sed 's-\["--g' 10211.json | sed 's-\"]--g' | sed 's-","-\n-g' | \
     # This captures
@@ -26,7 +26,7 @@ for f in ./*.json; do
     sed 's/Grade Mode:Normal, Audit, In Progress/Normal Audit In Progress,/g' | \
     sed 's/Grade Mode: Normal\, Audit/Normal Audit,/g' | \
     # 8. The repeat status:
-    sed 's-Prerequisites: \(.*\)Repeat Status: -,\1,-g' | sed 's- *Schedule Type:\(.*\)-,\1,-g' >> $f.csv
+    sed 's-Prerequisites: \(.*\)Repeat Status: -,\1,-g' | sed 's- *Schedule Type:\(.*\)-,\1,-g' >> "${f%.*}".csv
 done
 
 

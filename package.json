@@ -13,5 +13,5 @@
   },
   "type": "module",
   "types": "module",
-  "description": ""
+  "description": "Augusta University uses the [modern campus product](https://moderncampus.com/) for [their catalog](https://catalog.augusta.edu/). In addition to being hard to navigate, this platform is poorly accessible, since the courses' description, pre-requisites, etc., are accessible only after clicking on some elements (triggering some javascript function)."
 }
