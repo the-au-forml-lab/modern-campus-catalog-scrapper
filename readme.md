@@ -10,12 +10,13 @@ This repository hosts two simple programs (one using the Node.js library [Puppet
 Normally, the following steps are enough:
 
 1. Find the `poid` of your program. For example, the _Bachelor of Science with a major in Computer Science_ is at `https://catalog.augusta.edu/preview_program.php?catoid=44&poid=10211&hl=computer&returnto=search`, which means that the `poid` I am looking for is `10211`.
-2. Open `format_catalog_json.sh`, and insert your `poid` in the `arr` array (at the top of the file), deleting all the other poids.
+2. Open `scrape_catalog.sh`, and insert your `poid` in the `arr` array (at the top of the file), deleting all the other poids.
 3. Run the following commands:
     ```
     npm init -y 
     npm install puppeteer
-    chmod +x format_catalog_json.sh
-    ./format_catalog_json.sh
+    chmod +x scrape_catalog.sh
+    chmod +x convert_to_csv.sh
+    ./scrape_catalog.sh
     ```
 4. Open the `outputs/xxxx.csv` file(s) (possibly with [libreoffice](https://www.libreoffice.org/)).
