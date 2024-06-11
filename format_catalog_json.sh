@@ -2,6 +2,7 @@
 
 ## declare an array variable
 declare -a arr=(
+    # Insert your poid here and delete the following.
     "10215" # Minor in Computer Science
     "10674" # Bachelor of Science in Biomedical Systems Engineering
     "10211" # Bachelor of Science with a major in Computer Science
