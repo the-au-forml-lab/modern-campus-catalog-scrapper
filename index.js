@@ -1,3 +1,21 @@
+var programs_to_scrape = [
+  "10215", // Minor in Computer Science
+  "10674", // Bachelor of Science in Biomedical Systems Engineering
+  "10211", // Bachelor of Science with a major in Computer Science
+  "10361", // Bachelor of Science with a major in Cyber Operations
+  "10337", // Bachelor of Science with a major in Cybersecurity
+  "10394", // Bachelor of Science with a major in Cybersecurity Engineering
+  "10369", // Bachelor of Science in Information Technology
+  "10370", // Bachelor of Science in Information Technology with a concentration in Business
+  "10349", // Certificate of Less than One Year in Cyber Defender
+  "10350", // One-Year Certificate in Advanced Cyber Defender
+  "10351", // Post-Baccalaureate Certificate in Healthcare Information Security
+  "10480", // Doctor of Philosophy with a Major in Computer and Cyber Sciences
+  "10459", // Master of Science with a Major in Computer Science
+  "10301", // Master of Science with a Major in Information Security Management 
+  ]
+  
+  
 // General introduction to puppeteer:
 // https://www.freecodecamp.org/news/web-scraping-in-javascript-with-puppeteer/
 
@@ -90,4 +108,6 @@ const getProgram = async (progid) => {
   await browser.close();
 };
 
-getProgram(10211);
+programs_to_scrape.forEach(function(value){
+  getProgram(value);
+});
