@@ -53,7 +53,7 @@ const getProgram = async (progid) => {
   const page = await browser.newPage();
   
   // On this new page:
-  // - open the "https://catalog.augusta.edu/preview_program.php?poid=10211" website
+  // - open "https://catalog.augusta.edu/preview_program.php?poid=xxxx" where xxxx is the progrid
   // - wait until the dom content is loaded (HTML is ready)
   await page.goto("https://catalog.augusta.edu/preview_program.php?poid=" + progid, {
     waitUntil: "domcontentloaded",
